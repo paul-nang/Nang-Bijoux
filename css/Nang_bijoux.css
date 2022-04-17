@@ -450,25 +450,25 @@ width : 70vw;
 #bagues {
 grid-column: 1 / span 2;
 grid-row : 1 / span 2;
-background-image: url(file:///C:/Users/Admin/OneDrive%20-%20HEC%20Paris/Documents/Code/NB/images/bague1_2.jpg);
+background-image: url(https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/bague1_2.jpg);
 }
 
 #boucles_oreilles {
 grid-column: 1;
 grid-row : 3;
-background-image: url(file:///C:/Users/Admin/OneDrive%20-%20HEC%20Paris/Documents/Code/NB/images/bo1.jpg);
+background-image: url(https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/bo1.jpg);
 }
 
 #Collier {
 grid-column : 2;
 grid-row: 3;
-background-image: url(file:///C:/Users/Admin/OneDrive%20-%20HEC%20Paris/Documents/Code/NB/images/collier1_2.jpg);
+background-image: url(https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/collier1_2.jpg);
 }
 
 #Bracelet {
 grid-column : 1 / span 2;
 grid-row : 4;
-background-image: url(file:///C:/Users/Admin/OneDrive%20-%20HEC%20Paris/Documents/Code/NB/images/Bracelet1_2.jpg);
+background-image: url(https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/bracelet1_2.jpg);
 }
 
 #grid div {
