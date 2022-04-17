@@ -58,18 +58,18 @@ function reveal(id) {
 }
 
 
-function Hover_on(id, type_bijoux, i){
+function Hover_on(id, type_bijoux_min, i){
 			
 			// console.log(id)
 			// console.log(type_bijoux)
 			// console.log(i)
-			// console.log(`images/${type_bijoux}${i}_2.jpg`)
+			// console.log(`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux}${i}_2.jpg`)
 
-			document.getElementById(id).src=`images/${type_bijoux}${i}_2.jpg`
+			document.getElementById(id).src=`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}_2.jpg`
 
 		}
-function Hover_off(id,type_bijoux,i){
-			document.getElementById(id).src=`images/${type_bijoux}${i}.jpg`
+function Hover_off(id,type_bijoux_min,i){
+			document.getElementById(id).src=`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`
 		}
 
 function HoverchgtPhoto(id1, id2) {
@@ -83,7 +83,7 @@ function HoverchgtPhoto(id1, id2) {
 
 function id_collection(type_bijoux,nb_bjx,nom_bijoux, descr, prix) {
 	
-	
+	var type_bijoux_min = type_bijoux.toLowerCase()
 	//console.log('main-collection-'+type_bijoux);
 
 	// ci dessous c'est la création du titre
@@ -151,11 +151,11 @@ function id_collection(type_bijoux,nb_bjx,nom_bijoux, descr, prix) {
 		image.id=`photo-article-${type_bijoux}${i}`;
 		image.className="photo-article";
 		image.alt=`${type_bijoux} numéro${i}`;
-		image.src=`images/${type_bijoux}${i}.jpg`
+		image.src=`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`
 		var id_image = `photo-article-${type_bijoux}${i}`
 		
-		image.setAttribute("onmouseover", `Hover_on('${id_image}', '${type_bijoux}', '${i}')`)
-		image.setAttribute("onmouseleave", `Hover_off('${id_image}', '${type_bijoux}', '${i}')`)
+		image.setAttribute("onmouseover", `Hover_on('${id_image}', '${type_bijoux_min}', '${i}')`)
+		image.setAttribute("onmouseleave", `Hover_off('${id_image}', '${type_bijoux_min}', '${i}')`)
 
 		
 		var span = document.createElement("span");
@@ -208,6 +208,9 @@ function id_collection(type_bijoux,nb_bjx,nom_bijoux, descr, prix) {
 
 
 function Page2Vente(nbArticles,type_bijoux,titre_bijoux, descr, prix){
+
+var type_bijoux_min = type_bijoux.toLowerCase()
+
 	for (var i = 1; i <= nbArticles; i++) {
 		var main = document.createElement('main');
 		main.id=`main-PDV-${type_bijoux}${i}`;
@@ -232,20 +235,20 @@ function Page2Vente(nbArticles,type_bijoux,titre_bijoux, descr, prix){
 		fig1.className = "fig1-PDV fig-lat-PDV figPDV";
 
 		var img1 = document.createElement('img');
-		img1.id="photo1_"+i+type_bijoux
-		img1.setAttribute('onmouseover',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux}', 'photo1_${i}${type_bijoux}')`);
-		img1.setAttribute('onclick',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux}','photo1_${i}${type_bijoux}')`);
-		img1.setAttribute('src',`images/${type_bijoux}${i}.jpg`);
+		img1.id="photo1_"+i+type_bijoux_min
+		img1.setAttribute('onmouseover',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}', 'photo1_${i}${type_bijoux_min}')`);
+		img1.setAttribute('onclick',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}','photo1_${i}${type_bijoux_min}')`);
+		img1.setAttribute('src',`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`);
 		img1.className ="photo1-PDV photo-lat-PDV photoPDV"
 
 		var fig2 = document.createElement('figure');
 		fig2.className = "fig2-PDV fig-lat-PDV figPDV";
 
 		var img2 = document.createElement('img');
-		img2.id="photo2_"+i+type_bijoux
-		img2.setAttribute('onmouseover',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux}','photo2_${i}${type_bijoux}')`);
-		img2.setAttribute('onclick',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux}','photo2_${i}${type_bijoux}')`);
-		img2.setAttribute('src',`images/${type_bijoux}${i}_2.jpg`);
+		img2.id="photo2_"+i+type_bijoux_min
+		img2.setAttribute('onmouseover',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}','photo2_${i}${type_bijoux_min}')`);
+		img2.setAttribute('onclick',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}','photo2_${i}${type_bijoux_min}')`);
+		img2.setAttribute('src',`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}_2.jpg`);
 		img2.className ="photo2-PDV photo-lat-PDV photoPDV"
 
 
@@ -259,9 +262,9 @@ function Page2Vente(nbArticles,type_bijoux,titre_bijoux, descr, prix){
 		
 
 		var img3 = document.createElement('img');
-		img3.setAttribute('src',`images/${type_bijoux}${i}.jpg`);
+		img3.setAttribute('src',`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`);
 		img3.className ="mainphoto-PDV photoPDV"
-		img3.id="mainPhotoPDV"+i+type_bijoux
+		img3.id="mainPhotoPDV"+i+type_bijoux_min
 
 		var p1 = document.createElement('p');
 		p1.className="description-PDV"
