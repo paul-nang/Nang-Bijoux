@@ -63,13 +63,13 @@ function Hover_on(id, type_bijoux_min, i){
 			// console.log(id)
 			// console.log(type_bijoux)
 			// console.log(i)
-			// console.log(`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux}${i}_2.jpg`)
+			// console.log(`images/${type_bijoux}${i}_2.jpg`)
 
-			document.getElementById(id).src=`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}_2.jpg`
+			document.getElementById(id).src=`images/${type_bijoux_min}${i}_2.jpg`
 
 		}
 function Hover_off(id,type_bijoux_min,i){
-			document.getElementById(id).src=`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`
+			document.getElementById(id).src=`images/${type_bijoux_min}${i}.jpg`
 		}
 
 function HoverchgtPhoto(id1, id2) {
@@ -151,7 +151,7 @@ function id_collection(type_bijoux,nb_bjx,nom_bijoux, descr, prix) {
 		image.id=`photo-article-${type_bijoux}${i}`;
 		image.className="photo-article";
 		image.alt=`${type_bijoux} numéro${i}`;
-		image.src=`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`
+		image.src=`images/${type_bijoux_min}${i}.jpg`
 		var id_image = `photo-article-${type_bijoux}${i}`
 		
 		image.setAttribute("onmouseover", `Hover_on('${id_image}', '${type_bijoux_min}', '${i}')`)
@@ -238,7 +238,7 @@ var type_bijoux_min = type_bijoux.toLowerCase()
 		img1.id="photo1_"+i+type_bijoux_min
 		img1.setAttribute('onmouseover',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}', 'photo1_${i}${type_bijoux_min}')`);
 		img1.setAttribute('onclick',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}','photo1_${i}${type_bijoux_min}')`);
-		img1.setAttribute('src',`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`);
+		img1.setAttribute('src',`images/${type_bijoux_min}${i}.jpg`);
 		img1.className ="photo1-PDV photo-lat-PDV photoPDV"
 
 		var fig2 = document.createElement('figure');
@@ -248,7 +248,7 @@ var type_bijoux_min = type_bijoux.toLowerCase()
 		img2.id="photo2_"+i+type_bijoux_min
 		img2.setAttribute('onmouseover',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}','photo2_${i}${type_bijoux_min}')`);
 		img2.setAttribute('onclick',`HoverchgtPhoto('mainPhotoPDV${i}${type_bijoux_min}','photo2_${i}${type_bijoux_min}')`);
-		img2.setAttribute('src',`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}_2.jpg`);
+		img2.setAttribute('src',`images/${type_bijoux_min}${i}_2.jpg`);
 		img2.className ="photo2-PDV photo-lat-PDV photoPDV"
 
 
@@ -262,7 +262,7 @@ var type_bijoux_min = type_bijoux.toLowerCase()
 		
 
 		var img3 = document.createElement('img');
-		img3.setAttribute('src',`https://raw.githubusercontent.com/paul-nang/Nang-Bijoux/main/images/${type_bijoux_min}${i}.jpg`);
+		img3.setAttribute('src',`images/${type_bijoux_min}${i}.jpg`);
 		img3.className ="mainphoto-PDV photoPDV"
 		img3.id="mainPhotoPDV"+i+type_bijoux_min
 
